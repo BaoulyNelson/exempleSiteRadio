@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFI Simulation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/recherche.css">
+    <link rel="stylesheet" href="css/contenu.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/bottom.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="user-info" onclick="window.location.href = 'inscription.html';">
+            <i class="fas fa-user-circle"></i>
+        </div>
+
+        <img src="images/logo.jpg" alt="Logo" class="responsive-img">
+        <div class="search-icon" onclick="toggleSearch()">
+            <i class="fas fa-search fa-lg"></i>
+
+        </div>
+        <div class="search-container">
+            <form class="form-inline">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class="btn my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div id="home" class="section-content active">
+            <h1>La une</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt obcaecati explicabo est. Recusandae
+                temporibus nemo ad vero ea architecto blanditiis?</p>
+        </div>
+
+        <div id="podcasts" class="section-content">
+            <h1>Podcasts</h1>
+            <div class="podcast-item">
+                <h5>Podcast 1: Introduction à la programmation</h5>
+                <p>Durée: 30 min</p>
+                <button class="btn btn-primary">Écouter</button>
+
+            </div>
+            <div class="podcast-item">
+                <h5>Podcast 2: Les nouveautés technologiques</h5>
+                <p>Durée: 45 min</p>
+                <button class="btn btn-primary">Écouter</button>
+
+            </div>
+        </div>
+        <div id="directs" class="section-content">
+            <h1>Directs</h1>
+            <div class="live-item">
+                <h5>Émission en direct: Le journal de 20h</h5>
+                <p>En cours...</p>
+                <button class="btn btn-danger">Regarder</button>
+
+            </div>
+            <div class="live-item">
+                <h5>Concert en direct: Groupe XYZ</h5>
+                <p>Début: 21h</p>
+                <button class="btn btn-danger">Regarder</button>
+
+            </div>
+        </div>
+
+        <div id="thematiques" class="section-content">
+            <h1>Thématiques</h1>
+            <p>Contenu de la section Thématiques</p>
+        </div>
+    </div>
+
+    <!-- Panneau du menu -->
+    <div class="menu-panel" id="menuPanel">
+        <div class="menu-content">
+            <div class="menu-item">
+                <h2>Titre 1</h2>
+                <p>Élément 1</p>
+            </div>
+            <div class="menu-item">
+                <h2>Titre 2</h2>
+                <p>Élément 2</p>
+            </div>
+            <div class="menu-item">
+                <h2>Titre 3</h2>
+                <p>Élément 3</p>
+            </div>
+            <div class="menu-item">
+                <h2>Titre 4</h2>
+                <p>Élément 4</p>
+            </div>
+            <div class="menu-item">
+                <h2>Titre 5</h2>
+                <p>Élément 5</p>
+            </div>
+            <div class="menu-item">
+                <h2>Titre 6</h2>
+                <p>Élément 6</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Barre de navigation en bas -->
+    <nav class="navbar navbar-expand navbar-bottom">
+        <ul class="navbar-nav w-100">
+            <li class="nav-item">
+                <a class="nav-link active" href="#home" data-target="home">
+                    <i class="fas fa-home"></i><br>
+                    La une
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#podcasts" data-target="podcasts">
+                    <i class="fas fa-podcast"></i><br>
+                    Podcasts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#directs" data-target="directs">
+                    <i class="fas fa-play-circle"></i><br>
+                    Directs
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#thematiques" data-target="thematiques">
+                    <i class="fas fa-th-large"></i><br>
+                    Thématiques
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#menu" data-target="menu">
+                    <i class="fas fa-bars"></i><br>
+                    Menu
+                </a>
+            </li>
+            <div id="messageContainer"></div>
+        </ul>
+    </nav>
+
+    <script src="script/script.js"></script>
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

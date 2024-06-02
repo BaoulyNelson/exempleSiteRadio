@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      button {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      a {
+        text-decoration: none;
+        color: #007bff;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      .close-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="close-button" onclick="closeForm()">X</button>
+    <form action="PHP/inscription.php" method="post" onsubmit="return validatePassword()">
+        <h2>Inscription</h2>
+        <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+        <input type="email" name="email" placeholder="Adresse email" required>
+        <input type="password" name="password" id="password" placeholder="Mot de passe" required>
+        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirmez le mot de passe" required>
+        <button type="submit" name="inscription">S'inscrire</button>
+    </form>
+    <p>Déjà un compte ? <a href="login.html">Connectez-vous ici</a></p>
+    <p><a href="mdp_oublie.html">Mot de passe oublié ?</a></p>
+</div>
+
+<script>
+    function validatePassword() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+        if (password != confirmPassword) {
+            alert("Les mots de passe ne correspondent pas !");
+            return false;
+        }
+        return true;
+    }
+
+    function closeForm() {
+        var container = document.querySelector('.container');
+        container.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

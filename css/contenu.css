@@ -1,0 +1,120 @@
+.container {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    margin-bottom: 100px; /* Ajoute de l'espace en dessous du conteneur */
+}
+
+.container p {
+    text-align: justify; /* Justifie le texte à l'intérieur des paragraphes */
+    margin: 20px 0;      /* Espacement au-dessus et en dessous des paragraphes */
+    padding: 10px;       /* Espacement intérieur */
+    background-color: #f8f9fa; /* Couleur de fond */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour donner un effet de profondeur */
+    }
+
+
+h1, h2, h3, h4 {
+    display: inline-block;
+     border-radius: 5px; /* Coins arrondis */
+}
+
+h1 {
+    background-color: #007bff; /* Bleu */
+    color: white; /* Couleur du texte */
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: 110px; /* Ajout d'un espace au-dessus du titre pour compenser la hauteur de l'en-tête */
+}
+h2 {
+    background-color: #28a745; /* Vert */
+    color: white; /* Couleur du texte */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+h3 {
+    background-color: #ffc107; /* Jaune */
+    color: black; /* Couleur du texte */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+h4 {
+    background-color: #17a2b8; /* Cyan */
+    color: white; /* Couleur du texte */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.section-content {
+    display: none;
+    width: 100%;
+    /* Assurez-vous que les sections prennent toute la largeur disponible */
+    text-align: center;
+    /* Centre le texte à l'intérieur des sections */
+}
+
+.section-content.active {
+    display: block;
+}
+
+
+
+.menu-panel {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 100px); /* Ajustez la hauteur en fonction de la hauteur du header */
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateY(100%);
+    transition: transform 0.6s ease-in-out;
+    z-index: 999; /* Assurez-vous que le panneau soit en dessous du header */
+}
+
+.menu-panel.open {
+    display: block;
+    transform: translateY(0);
+}
+
+.menu-panel .menu-content {
+    position: relative;
+    height: 100%;
+    background: -o-linear-gradient();
+    padding: 20px;
+    overflow-y: scroll;
+    padding-bottom: 80px; /* Ajout d'un espace en bas du contenu du menu */
+}
+
+.menu-panel .menu-content .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #000;
+    font-size: 24px;
+}
+.menu-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    flex: 1 0 50%; /* Chaque élément prend 50% de la largeur */
+    box-sizing: border-box; /* Pour inclure les bordures et les marges dans la largeur */
+    padding: 10px; /* Ajouter un peu d'espace autour des éléments */
+}
+
+.menu-item h5 {
+    background-color: #007bff; /* Bleu */
+    color: white; /* Couleur du texte */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 10px; /* Ajout de padding pour le titre */
+    margin-top: 0; /* Pas d'espace au-dessus du titre */
+    margin-bottom: 10px; /* Espace en-dessous du titre */
+}
+

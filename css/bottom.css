@@ -1,0 +1,32 @@
+.navbar-bottom {
+    background-color: white;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    border-top: solid 1px gainsboro;
+    padding: 5px 15px; /* Réduction du padding */
+}
+
+
+.navbar-bottom .nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.navbar-bottom .nav-link {
+    color: black;
+}
+
+.navbar-bottom .nav-link.active {
+    color: red;            
+}
+
+.navbar-bottom.active,
+.nav-link:hover {
+    background-color: #555;
+    color: red;            
+    border-radius: 5px;
+    padding: 5px 10px;
+}

@@ -1,0 +1,36 @@
+
+/* Style pour l'icône */
+.search-icon i {
+    color: #fff; /* Couleur de l'icône */
+    cursor: pointer;
+}
+
+.search-container {
+    display: none;
+    align-items: center;
+}
+
+.search-container .form-control {
+    border-radius: 5px;
+}
+
+.search-container .btn {
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+/* Effet au survol */
+.search-icon:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+}
+
+
+#messageContainer {
+    color: red; /* Couleur du texte en rouge */
+    background-color: white; /* Fond blanc */
+    padding: 20px; /* Ajout de padding pour espacement interne */
+    text-align: center; /* Texte centré à l'intérieur */
+}

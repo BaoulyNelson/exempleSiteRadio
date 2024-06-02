@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mot de passe oublié</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      input[type="email"],
+      button {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      a {
+        text-decoration: none;
+        color: #007bff;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      .close-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="close-button" onclick="closeForm()">X</button>
+    <form action="PHP/reset_password.php" method="post">
+      <h2>Mot de passe oublié</h2>
+      <p>Entrez votre adresse email pour réinitialiser votre mot de passe.</p>
+      <input type="email" name="email" placeholder="Adresse email" required>
+      <button type="submit">Réinitialiser le mot de passe</button>
+    </form>
+    <p>Se souvenir du mot de passe ? <a href="index.html">Connectez-vous ici</a></p>
+  </div>
+  <script>
+    function closeForm() {
+      var container = document.querySelector('.container');
+      container.style.display = 'none';
+    }
+  </script>
+</body>
+</html>
