@@ -13,11 +13,20 @@
 .navbar-bottom .nav-item {
     flex: 1;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 .navbar-bottom .nav-link {
     color: black;
 }
+
+@media (max-width: 600px) {
+    .nav-link  {
+        font-size: 12px; /* Ajustez cette valeur selon vos besoins */
+    }
+}
+
 
 .navbar-bottom .nav-link.active {
     color: red;            

@@ -26,24 +26,32 @@
         <img src="images/logo.jpg" alt="Logo" class="responsive-img">
         <div class="search-icon" onclick="toggleSearch()">
             <i class="fas fa-search fa-lg"></i>
-
         </div>
         <div class="search-container">
+            <div class="close-icon" onclick="toggleSearch()">
+                <i class="fas fa-times fa-lg"></i>
+            </div>
             <form class="form-inline">
-                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search"
-                    aria-label="Search">
+
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                <div id="messageContainer"></div>
+            
             </form>
+
         </div>
+        
+        
 
     </div>
 
     <div class="container">
         <div id="home" class="section-content active">
             <h1>La une</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt obcaecati explicabo est. Recusandae
-                temporibus nemo ad vero ea architecto blanditiis?</p>
-        </div>
+            <p>Bienvenue sur notre site. Explorez les dernières nouvelles et les mises à jour.</p>
+            <img src="https://via.placeholder.com/600x300" alt="Accueil Image">
+
+       </div>
 
         <div id="podcasts" class="section-content">
             <h1>Podcasts</h1>
@@ -146,11 +154,11 @@
                     Menu
                 </a>
             </li>
-            <div id="messageContainer"></div>
         </ul>
     </nav>
 
     <script src="script/script.js"></script>
+    <script src="script/recherche.js"></script>
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

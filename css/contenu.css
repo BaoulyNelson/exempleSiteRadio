@@ -8,14 +8,26 @@
     margin-bottom: 100px; /* Ajoute de l'espace en dessous du conteneur */
 }
 
+/* Styles généraux pour les paragraphes */
+p {
+    text-align: left; /* Alignement à gauche par défaut */
+}
+
+/* Styles spécifiques pour les paragraphes dans .container */
 .container p {
-    text-align: justify; /* Justifie le texte à l'intérieur des paragraphes */
     margin: 20px 0;      /* Espacement au-dessus et en dessous des paragraphes */
     padding: 10px;       /* Espacement intérieur */
     background-color: #f8f9fa; /* Couleur de fond */
     border-radius: 10px; /* Coins arrondis */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour donner un effet de profondeur */
+}
+
+/* Media query pour les écrans plus grands */
+@media (min-width: 768px) {
+    .container p {
+        text-align: justify; /* Alignement justifié pour les écrans plus grands */
     }
+}
 
 
 h1, h2, h3, h4 {
@@ -61,8 +73,6 @@ h4 {
     display: block;
 }
 
-
-
 .menu-panel {
     display: none;
     position: fixed;
@@ -98,6 +108,7 @@ h4 {
     color: #000;
     font-size: 24px;
 }
+
 .menu-content {
     display: flex;
     flex-wrap: wrap;
@@ -116,5 +127,12 @@ h4 {
     padding: 10px; /* Ajout de padding pour le titre */
     margin-top: 0; /* Pas d'espace au-dessus du titre */
     margin-bottom: 10px; /* Espace en-dessous du titre */
+}
+
+.container img, .container video {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+
 }
 
