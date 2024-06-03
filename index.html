@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RFI Simulation</title>
+    <title>MFM Radio en Direct</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="css/contenu.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/bottom.css">
+
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-flash/2.2.1/videojs-flash.min.js"></script>
+
 </head>
 
 <body>
@@ -26,24 +31,29 @@
         <img src="images/logo.jpg" alt="Logo" class="responsive-img">
         <div class="search-icon" onclick="toggleSearch()">
             <i class="fas fa-search fa-lg"></i>
-
         </div>
         <div class="search-container">
+            <div class="close-icon" onclick="toggleSearch()">
+                <i class="fas fa-times fa-lg"></i>
+            </div>
             <form class="form-inline">
-                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search"
-                    aria-label="Search">
-                <button class="btn my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
 
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                <div id="messageContainer"></div>
+            
+            </form>
+
+        </div>
     </div>
 
     <div class="container">
         <div id="home" class="section-content active">
             <h1>La une</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt obcaecati explicabo est. Recusandae
-                temporibus nemo ad vero ea architecto blanditiis?</p>
-        </div>
+            <p>Bienvenue sur notre site. Explorez les dernières nouvelles et les mises à jour.</p>
+            <img src="https://via.placeholder.com/600x300" alt="Accueil Image">
+
+       </div>
 
         <div id="podcasts" class="section-content">
             <h1>Podcasts</h1>
@@ -66,19 +76,31 @@
                 <h5>Émission en direct: Le journal de 20h</h5>
                 <p>En cours...</p>
                 <button class="btn btn-danger">Regarder</button>
-
+                <video id="radioPlayer" class="video-js vjs-default-skin" controls preload="auto" width="640"
+                    height="264"
+                    data-setup='{"techOrder": ["flash"], "sources": [{"type": "rtmp/mp4", "src": "rtmp://mi.castr.io/static/live_e0425460214811ef9d5e6ba8b2e6679b?password=4574a18c"}]}'>
+                </video>
             </div>
             <div class="live-item">
                 <h5>Concert en direct: Groupe XYZ</h5>
                 <p>Début: 21h</p>
                 <button class="btn btn-danger">Regarder</button>
-
+                <iframe src="https://player.castr.com/live_e0425460214811ef9d5e6ba8b2e6679b?onlyAudio=true" width="100%"
+                    style="height: 50px;" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen
+                    webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>
+                </iframe>
             </div>
         </div>
 
         <div id="thematiques" class="section-content">
             <h1>Thématiques</h1>
-            <p>Contenu de la section Thématiques</p>
+            <a href="#">Culture et Médias</a>
+            <a href="#">Environnement</a>
+            <a href="#">Économie</a>
+            <a href="#">Sciences</a>
+            <a href="#">Sports</a>
+            <a href="#">Afrique Foot</a>
+            <a href="#">Stop l'infox</a>
         </div>
     </div>
 
@@ -86,31 +108,67 @@
     <div class="menu-panel" id="menuPanel">
         <div class="menu-content">
             <div class="menu-item">
-                <h2>Titre 1</h2>
-                <p>Élément 1</p>
+                <h2><a href="#">Accueil</a></h2>
+                <p><a href="#">RFI Monde en direct</a></p>
+                <p><a href="#">Actualités</a></p>
+                <p><a href="#">À propos</a></p>
             </div>
             <div class="menu-item">
-                <h2>Titre 2</h2>
-                <p>Élément 2</p>
+                <h2><a href="#">Podcast</a></h2>
+                <p><a href="#">Élément 2</a></p>
+                <p><a href="#">Derniers épisodes</a></p>
+                <p><a href="#">Meilleurs moments</a></p>
             </div>
             <div class="menu-item">
-                <h2>Titre 3</h2>
-                <p>Élément 3</p>
+                <h2><a href="#">En direct</a></h2>
+                <p><a href="#">Élément 3</a></p>
+                <p><a href="#">Diffusion en continu</a></p>
+                <p><a href="#">Événements en direct</a></p>
             </div>
+            
+
             <div class="menu-item">
-                <h2>Titre 4</h2>
-                <p>Élément 4</p>
+                <h2>Thematiques</h2>
+                <a href="#">Culture et Médias</a>
+                <a href="#">Environnement</a>
+                <a href="#">Économie</a>
+                <a href="#">Sciences</a>
+                <a href="#">Sports</a>
+                <a href="#">Afrique Foot</a>
+                <a href="#">Stop l'infox</a>
+                <a href="#">RFI Musique</a>
+                <a href="#">Le Français facile avec RFI</a>
+                <a href="#">RFI Connaissances</a>
+                <a href="#">Tech</a>
+                <a href="#">Contenus sponsorisés</a>
             </div>
+
             <div class="menu-item">
-                <h2>Titre 5</h2>
-                <p>Élément 5</p>
+                <h2>Region</h2>
+                <a href="#">Afrique</a>
+                <a href="#">Amériques</a>
+                <a href="#">Asie-Pacifique</a>
+                <a href="#">Europe</a>
+                <a href="#">Moyen-Orient</a>
+                <a href="#">France</a>
+                <a href="#">International</a>
             </div>
+
             <div class="menu-item">
-                <h2>Titre 6</h2>
-                <p>Élément 6</p>
+                <h2>Ecouter</h2>
+                <a href="#">RFI Monde en direct</a>
+                <a href="#">RFI Afrique en direct</a>
+                <a href="#">Podcasts</a>
+                <a href="#">Vidéos</a>
+                <a href="#">Journaux Monde</a>
+                <a href="#">Journaux Afrique</a>
+                <a href="#">Journaux Amériques/Haïti</a>
+                <a href="#">Journal en français facile</a>
+                <a href="#">Grille des programmes Monde</a>
+                <a href="#">Grille des programmes Afrique</a>
+                <a href="#">Capter RFI</a>
             </div>
         </div>
-
     </div>
 
     <!-- Barre de navigation en bas -->
@@ -151,11 +209,15 @@
     </nav>
 
     <script src="script/script.js"></script>
+    <script src="script/recherche.js"></script>
     <!-- jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script>
+        var player = videojs('radioPlayer');
+        player.play();
+    </script>
 </body>
 
 </html>

@@ -1,13 +1,25 @@
-
 /* Style pour l'icône */
 .search-icon i {
-    color: #fff; /* Couleur de l'icône */
+    color: #fff;
+    /* Couleur de l'icône */
     cursor: pointer;
 }
 
 .search-container {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* Positionne le panneau hors de l'écran à droite */
+    width: 300px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #555;
+    /* Couleur de fond spécifique pour le panneau droit */
+    height: 30%;
 }
 
 .search-container .form-control {
@@ -21,16 +33,43 @@
     color: white;
     border: none;
 }
+
+/* Style pour l'icône de fermeture */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close-icon i {
+    color: white;
+    /* Couleur de l'icône de fermeture */
+}
+
 /* Effet au survol */
-.search-icon:hover {
-    background-color: #0056b3; /* Couleur de fond au survol */
-    transform: scale(1.1); /* Agrandir légèrement au survol */
+.search-icon:hover,
+.close-icon:hover {
+    background-color: #0056b3;
+    /* Couleur de fond au survol */
+    transform: scale(1.1);
+    /* Agrandir légèrement au survol */
+}
+
+/* Classe pour afficher le panneau */
+.search-container.open {
+    right: 0;
+    /* Amène le panneau dans la vue */
 }
 
 
 #messageContainer {
-    color: red; /* Couleur du texte en rouge */
-    background-color: white; /* Fond blanc */
-    padding: 20px; /* Ajout de padding pour espacement interne */
-    text-align: center; /* Texte centré à l'intérieur */
+    color: red;
+    /* Couleur du texte en rouge */
+    background-color: white;
+    /* Fond blanc */
+
+    /* Ajout de padding pour espacement interne */
+    text-align: center;
+    /* Texte centré à l'intérieur */
 }

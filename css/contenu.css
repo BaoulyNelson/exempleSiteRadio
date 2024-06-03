@@ -118,3 +118,42 @@ h4 {
     margin-bottom: 10px; /* Espace en-dessous du titre */
 }
 
+#thematiques {
+    text-align: center; /* Assure que les liens sont alignés à gauche */
+}
+
+#thematiques a {
+    display: block; /* Empile les liens en colonne */
+    margin: 5px 0;
+    padding: 5px; /* Ajustez le padding selon vos besoins */
+    text-decoration: none;
+    color: black;
+    width: fit-content; /* Ajuste la largeur du lien au contenu */
+}
+
+#thematiques a:hover {
+    text-decoration: underline;
+    color: red;
+    background-color: #000;
+}
+
+.menu-item {
+    /* Styles pour le conteneur général */
+    padding: 10px; /* Ajouter un padding pour espacer le contenu du conteneur */
+}
+
+.menu-item a {
+    display: block; /* Assure que chaque élément est empilé en colonne */
+    margin: 5px 0; /* Espace entre les éléments */
+    padding: 5px; /* Espace à l'intérieur de chaque élément */
+    text-decoration: none; /* Retire la décoration du texte */
+    color: black; /* Couleur du texte */
+    width: fit-content; /* Ajuste la largeur de l'élément au contenu */
+}
+
+.menu-item a:hover {
+    text-decoration: underline; /* Souligne le texte au survol */
+    color: red; /* Change la couleur du texte au survol */
+    background-color: #000; /* Change le fond au survol */
+}
+
