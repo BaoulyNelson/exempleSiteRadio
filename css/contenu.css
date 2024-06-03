@@ -9,13 +9,20 @@
 }
 
 .container p {
-    text-align: justify; /* Justifie le texte à l'intérieur des paragraphes */
+    text-align: justify; /* Justifie le texte par défaut */
     margin: 20px 0;      /* Espacement au-dessus et en dessous des paragraphes */
     padding: 10px;       /* Espacement intérieur */
     background-color: #f8f9fa; /* Couleur de fond */
     border-radius: 10px; /* Coins arrondis */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour donner un effet de profondeur */
+}
+
+/* Pour les petits écrans */
+@media (max-width: 576px) {
+    .container p {
+        text-align: left; /* Aligne le texte à gauche */
     }
+}
 
 
 h1, h2, h3, h4 {
@@ -27,8 +34,9 @@ h1 {
     background-color: #007bff; /* Bleu */
     color: white; /* Couleur du texte */
     border-radius: 5px; /* Coins arrondis */
-    margin-top: 110px; /* Ajout d'un espace au-dessus du titre pour compenser la hauteur de l'en-tête */
+    margin-top: 120px; /* Ajout d'un espace au-dessus du titre pour compenser la hauteur de l'en-tête */
 }
+
 h2 {
     background-color: #28a745; /* Vert */
     color: white; /* Couleur du texte */
@@ -61,8 +69,6 @@ h4 {
     display: block;
 }
 
-
-
 .menu-panel {
     display: none;
     position: fixed;
@@ -83,7 +89,7 @@ h4 {
 
 .menu-panel .menu-content {
     position: relative;
-    height: 100%;
+    height: 50%;
     background: -o-linear-gradient();
     padding: 20px;
     overflow-y: scroll;

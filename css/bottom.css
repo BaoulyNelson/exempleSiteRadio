@@ -6,9 +6,12 @@
     width: 100%;
     z-index: 1000;
     border-top: solid 1px gainsboro;
-    padding: 5px 15px; /* Réduction du padding */
+    padding: 5px 10px; /* Réduction du padding */
+    display: flex;
+    justify-content: space-between; /* Assure un espace égal entre les éléments */
+    flex-wrap: nowrap; /* Empêche le retour à la ligne */
+    overflow-x: hidden; /* Permet le défilement horizontal si nécessaire */
 }
-
 
 .navbar-bottom .nav-item {
     flex: 1;
@@ -17,6 +20,7 @@
 
 .navbar-bottom .nav-link {
     color: black;
+    white-space: nowrap; /* Empêche le retour à la ligne */
 }
 
 .navbar-bottom .nav-link.active {
@@ -29,4 +33,14 @@
     color: red;            
     border-radius: 5px;
     padding: 5px 10px;
+}
+
+/* Pour les petits écrans */
+@media (max-width: 600px) {
+    .navbar-bottom {
+        padding: 5px 5px; /* Réduction supplémentaire du padding */
+    }
+    .navbar-bottom .nav-link {
+        font-size: 12px; /* Taille de police plus petite pour les petits écrans */
+    }
 }

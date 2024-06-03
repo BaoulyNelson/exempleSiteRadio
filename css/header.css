@@ -14,7 +14,6 @@
     border-bottom: solid 1px red; /* Bordure inférieure rouge */
     z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
     position: fixed; /* Fixe le header en haut de la page */
-    margin-bottom: 20px; /* Ajout d'un espace en-dessous du header */
 }
 
 
