@@ -102,3 +102,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// pano a ap gen menm hauteur ak header a
+
+document.addEventListener('DOMContentLoaded', function() {
+    function adjustSearchContainerHeight() {
+        const header = document.querySelector('.header');
+        const searchContainer = document.querySelector('.search-container');
+
+        const headerHeight = header.offsetHeight;
+
+        // Ajuste la hauteur du conteneur de recherche en fonction de la hauteur de l'en-tête
+        searchContainer.style.height = `${headerHeight}px`;
+    }
+
+    // Adjust height on initial load
+    adjustSearchContainerHeight();
+
+    // Adjust height on window resize
+    window.addEventListener('resize', adjustSearchContainerHeight);
+});

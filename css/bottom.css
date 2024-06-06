@@ -4,13 +4,13 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 998;
     border-top: solid 1px gainsboro;
-    padding: 5px 10px; /* Réduction du padding */
+    padding: 5px 10px;
     display: flex;
-    justify-content: space-between; /* Assure un espace égal entre les éléments */
-    flex-wrap: nowrap; /* Empêche le retour à la ligne */
-    overflow-x: hidden; /* Permet le défilement horizontal si nécessaire */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
 }
 
 .navbar-bottom .nav-item {

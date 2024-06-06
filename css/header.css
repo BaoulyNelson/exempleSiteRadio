@@ -1,21 +1,21 @@
 .header {
-    background-color: #007bff; /* Couleur de fond bleue */
-    color: white; /* Couleur du texte blanche */
-    text-align: center; /* Alignement du texte centré */
-    display: flex; /* Utilisation de flexbox pour la mise en page */
-    align-items: center; /* Alignement vertical centré des éléments enfants */
-    justify-content: space-between; /* Espacement égal entre les éléments enfants */
-    width: 100%; /* Largeur totale de l'écran */
-    box-sizing: border-box; /* Inclut les bordures et le padding dans la largeur */
-    overflow-x: hidden; /* Cache le débordement horizontal */
-    top: 0; /* Positionné en haut */
-    padding: 5px; /* Réduction du padding */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
-    border-bottom: solid 1px red; /* Bordure inférieure rouge */
-    z-index: 1000; /* Assure que le header reste au-dessus des autres éléments */
-    position: fixed; /* Fixe le header en haut de la page */
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: solid 1px red;
+    z-index: 1000;
+    position: fixed;
 }
-
 
 .user-info {
     font-size: 1.5em;

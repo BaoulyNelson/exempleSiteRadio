@@ -4,12 +4,10 @@
     /* Couleur de l'icône */
     cursor: pointer;
 }
-
 .search-container {
     position: fixed;
     top: 0;
-    right: -50%;
-    /* Positionne le panneau hors de l'écran à droite */
+    right: -50%; /* Positionne le panneau hors de l'écran à droite */
     width: 50%;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     transition: right 0.3s ease;
@@ -17,10 +15,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #555;
-    /* Couleur de fond spécifique pour le panneau droit */
-    height: 50%;
+    background-color: #555; /* Couleur de fond spécifique pour le panneau droit */
 }
+
+.search-container.search-open {
+    right: 0; /* Affiche le panneau de recherche */
+}
+
 
 .search-container .form-control {
     border-radius: 5px;

@@ -34,7 +34,7 @@ h1 {
     background-color: #007bff; /* Bleu */
     color: white; /* Couleur du texte */
     border-radius: 5px; /* Coins arrondis */
-    margin-top: 120px; /* Ajout d'un espace au-dessus du titre pour compenser la hauteur de l'en-tête */
+    margin-top: 70px; /* Ajout d'un espace au-dessus du titre pour compenser la hauteur de l'en-tête */
 }
 
 h2 {
@@ -68,32 +68,31 @@ h4 {
 .section-content.active {
     display: block;
 }
-
 .menu-panel {
     display: none;
     position: fixed;
-    bottom: 0;
+    bottom: 50px; /* Ajustez selon la hauteur de .navbar-bottom */
     left: 0;
     width: 100%;
-    height: calc(100% - 100px); /* Ajustez la hauteur en fonction de la hauteur du header */
-    background: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 110px); /* 50px pour .navbar-bottom et 60px pour .header */
     transform: translateY(100%);
     transition: transform 0.6s ease-in-out;
-    z-index: 999; /* Assurez-vous que le panneau soit en dessous du header */
+    z-index: 999;
+    color: white;
+    background: #666666;
+    padding: 20px;
+    overflow-y: auto;
+    padding-bottom: 80px; 
 }
 
 .menu-panel.open {
     display: block;
     transform: translateY(0);
+    animation: slideDown 0.6s ease-in-out forwards;
 }
 
-.menu-panel .menu-content {
-    position: relative;
-    height: 50%;
-    background: -o-linear-gradient();
-    padding: 20px;
-    overflow-y: scroll;
-    padding-bottom: 80px; /* Ajout d'un espace en bas du contenu du menu */
+.menu-panel.close {
+    animation: slideUp 0.2s ease-in-out forwards; /* Animation de glissement vers le haut */
 }
 
 .menu-panel .menu-content .close-icon {
@@ -104,6 +103,7 @@ h4 {
     color: #000;
     font-size: 24px;
 }
+
 .menu-content {
     display: flex;
     flex-wrap: wrap;
@@ -129,6 +129,7 @@ h4 {
 }
 
 #thematiques a {
+    background-color: #ffffff;
     display: block; /* Empile les liens en colonne */
     margin: 5px 0;
     padding: 5px; /* Ajustez le padding selon vos besoins */
@@ -149,6 +150,7 @@ h4 {
 }
 
 .menu-item a {
+    background-color: #ffffff;
     display: block; /* Assure que chaque élément est empilé en colonne */
     margin: 5px 0; /* Espace entre les éléments */
     padding: 5px; /* Espace à l'intérieur de chaque élément */

@@ -1,15 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    margin-bottom: 60px;
-    background-color:#eaeaea;
-    /* Espace pour la barre de navigation en bas */
-}
+    padding: 50px 0 50px 0; /* Espace pour le header en haut et la barre de navigation en bas */
+    background-color: #eaeaea;
+    overflow-y: auto;
 
-/* Désactiver le défilement */
-.no-scroll {
-    overflow: hidden;
 }
 
 .podcast-item,
