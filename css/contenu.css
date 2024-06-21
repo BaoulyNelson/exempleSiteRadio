@@ -104,64 +104,40 @@ h4 {
     font-size: 24px;
 }
 
+.menu-panel {
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
 .menu-content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .menu-item {
-    flex: 1 0 50%; /* Chaque élément prend 50% de la largeur */
-    box-sizing: border-box; /* Pour inclure les bordures et les marges dans la largeur */
-    padding: 10px; /* Ajouter un peu d'espace autour des éléments */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.menu-item h5 {
-    background-color: #007bff; /* Bleu */
-    color: white; /* Couleur du texte */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 10px; /* Ajout de padding pour le titre */
-    margin-top: 0; /* Pas d'espace au-dessus du titre */
-    margin-bottom: 10px; /* Espace en-dessous du titre */
+.menu-item:hover {
+    transform: scale(1.05);
 }
 
-#thematiques {
-    text-align: center; /* Assure que les liens sont alignés à gauche */
+.menu-item h2 {
+    font-family: 'Montserrat', sans-serif;
 }
 
-#thematiques a {
-    background-color: #ffffff;
-    display: block; /* Empile les liens en colonne */
-    margin: 5px 0;
-    padding: 5px; /* Ajustez le padding selon vos besoins */
+.menu-item p, .menu-item a {
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 10px;
     text-decoration: none;
-    color: black;
-    width: fit-content; /* Ajuste la largeur du lien au contenu */
-}
-
-#thematiques a:hover {
-    text-decoration: underline;
-    color: red;
-    background-color: #000;
-}
-
-.menu-item {
-    /* Styles pour le conteneur général */
-    padding: 10px; /* Ajouter un padding pour espacer le contenu du conteneur */
-}
-
-.menu-item a {
-    background-color: #ffffff;
-    display: block; /* Assure que chaque élément est empilé en colonne */
-    margin: 5px 0; /* Espace entre les éléments */
-    padding: 5px; /* Espace à l'intérieur de chaque élément */
-    text-decoration: none; /* Retire la décoration du texte */
-    color: black; /* Couleur du texte */
-    width: fit-content; /* Ajuste la largeur de l'élément au contenu */
+    color: #333;
 }
 
 .menu-item a:hover {
-    text-decoration: underline; /* Souligne le texte au survol */
-    color: red; /* Change la couleur du texte au survol */
-    background-color: #000; /* Change le fond au survol */
+    color: #4CAF50;
 }
-

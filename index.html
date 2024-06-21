@@ -38,10 +38,11 @@
             </div>
             <form class="form-inline">
 
-                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search"
+                    aria-label="Search">
                 <button class="btn my-2 my-sm-0" type="submit">Search</button>
                 <div id="messageContainer"></div>
-            
+
             </form>
 
         </div>
@@ -52,97 +53,55 @@
             <h1>La une</h1>
             <p>Bienvenue sur notre site. Explorez les dernières nouvelles et les mises à jour.</p>
             <img src="https://via.placeholder.com/600x300" alt="Accueil Image">
+        </div>
 
-       </div>
-
+        <!-- Section des Podcasts -->
         <div id="podcasts" class="section-content">
             <h1>Podcasts</h1>
-            <div class="podcast-item">
-                <h5>Podcast 1: Introduction à la programmation</h5>
-                <p>Durée: 30 min</p>
-                <button class="btn btn-primary">Écouter</button>
-
-            </div>
-            <div class="podcast-item">
-                <h5>Podcast 2: Les nouveautés technologiques</h5>
-                <p>Durée: 45 min</p>
-                <button class="btn btn-primary">Écouter</button>
-
+            <div class="podcast-grid">
+                <div class="podcast-item">
+                    <h5>Podcast 1: Introduction à la programmation</h5>
+                    <p>Durée: 30 min</p>
+                    <button class="btn btn-primary">Écouter</button>
+                </div>
+                <div class="podcast-item">
+                    <h5>Podcast 2: Les nouveautés technologiques</h5>
+                    <p>Durée: 45 min</p>
+                    <button class="btn btn-primary">Écouter</button>
+                </div>
             </div>
         </div>
-        <div id="directs" class="section-content">
-            <h1>Directs</h1>
-            <div class="live-item">
-                <h5>Émission en direct: Le journal de 20h</h5>
-                <p>En cours...</p>
-                <button class="btn btn-danger">Regarder</button>
-                <video id="radioPlayer" class="video-js vjs-default-skin" controls preload="auto" width="640"
-                    height="264"
-                    data-setup='{"techOrder": ["flash"], "sources": [{"type": "rtmp/mp4", "src": "rtmp://mi.castr.io/static/live_e0425460214811ef9d5e6ba8b2e6679b?password=4574a18c"}]}'>
-                </video>
-            </div>
 
-            <div class="live-item">
-                <h5>Concert en direct: Groupe XYZ</h5>
-                <p>Début: 21h</p>
-                <button class="btn btn-danger">Regarder</button>
-                <iframe src="https://player.castr.com/live_e0425460214811ef9d5e6ba8b2e6679b?onlyAudio=true" width="100%"
-                    style="height: 50px;" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen
-                    webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>
-                </iframe>
-            </div>
-            
+     <!-- Section des Directs -->
+<div id="directs" class="section-content">
+    <h1>Directs</h1>
+    <div class="live-grid">
+        <div class="live-item">
+            <h5>Émission en direct: Le journal de 20h</h5>
+            <p>En cours...</p>
+            <button class="btn btn-danger">Regarder</button>
+            <video id="radioPlayer" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264"
+                data-setup='{"techOrder": ["flash"], "sources": [{"type": "rtmp/mp4", "src": "rtmp://mi.castr.io/static/live_e0425460214811ef9d5e6ba8b2e6679b?password=4574a18c"}]}'>
+            </video>
         </div>
 
-        <div id="thematiques" class="section-content">
-            <h1>Thématiques</h1>
-            <a href="#">Culture et Médias</a>
-            <a href="#">Environnement</a>
-            <a href="#">Économie</a>
-            <a href="#">Sciences</a>
-            <a href="#">Sports</a>
-            <a href="#">Afrique Foot</a>
-            <a href="#">Stop l'infox</a>
+        <div class="live-item">
+            <h5>Concert en direct: Groupe XYZ</h5>
+            <p>Début: 21h</p>
+            <button class="btn btn-danger">Regarder</button>
+            <iframe src="https://player.castr.com/live_e0425460214811ef9d5e6ba8b2e6679b?onlyAudio=true" width="100%"
+                style="height: 50px;" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen
+                webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen>
+            </iframe>
         </div>
     </div>
+</div>
 
-    <!-- Panneau du menu -->
-    <div class="menu-panel" id="menuPanel">
-        <div class="menu-content">
 
-            <div class="menu-item">
-                <h2>Accueil</h2>
-                <p><a href="#">RFI Monde en direct</a></p>
-                <p><a href="#">Actualités</a></p>
-                <p><a href="#">À propos</a></p>
-            </div>
-
-            <div class="menu-item">
-                <h2>Podcast</h2>
-                <p><a href="#">Élément 2</a></p>
-                <p><a href="#">Derniers épisodes</a></p>
-                <p><a href="#">Meilleurs moments</a></p>
-            </div>
-
-            <div class="menu-item">
-                <h2>En direct</h2>
-                <p><a href="#">Diffusion en continu</a></p>
-                <p><a href="#">Événements en direct</a></p>
-                <a href="#">Économie</a>
-                <a href="#">Sciences</a>
-                <a href="#">Sports</a>
-                <a href="#">Afrique Foot</a>
-                <a href="#">Stop l'infox</a>
-                <a href="#">RFI Musique</a>
-                <a href="#">Le Français facile avec RFI</a>
-                <a href="#">RFI Connaissances</a>
-                <a href="#">Tech</a>
-                <a href="#">Contenus sponsorisés</a>
-            </div>
-            
-
-            <div class="menu-item">
-                <h2>Thematiques</h2>
+        <!-- Section des Thématiques -->
+        <div id="thematiques" class="section-content">
+            <h1>Thématiques</h1>
+            <div class="thematiques-grid">
                 <a href="#">Culture et Médias</a>
                 <a href="#">Environnement</a>
                 <a href="#">Économie</a>
@@ -150,92 +109,140 @@
                 <a href="#">Sports</a>
                 <a href="#">Afrique Foot</a>
                 <a href="#">Stop l'infox</a>
-                <a href="#">RFI Musique</a>
-                <a href="#">Le Français facile avec RFI</a>
-                <a href="#">RFI Connaissances</a>
-                <a href="#">Tech</a>
-                <a href="#">Contenus sponsorisés</a>
             </div>
+        </div>
 
-            <div class="menu-item">
-                <h2>Region</h2>
-                <a href="#">Afrique</a>
-                <a href="#">Amériques</a>
-                <a href="#">Asie-Pacifique</a>
-                <a href="#">Europe</a>
-                <a href="#">Moyen-Orient</a>
-                <a href="#">France</a>
-                <a href="#">International</a>
-                <a href="#">Afrique</a>
-                <a href="#">Amériques</a>
-                <a href="#">Asie-Pacifique</a>
-                <a href="#">Europe</a>
-            </div>
 
-            <div class="menu-item">
-                <h2>Ecouter</h2>
-                <a href="#">RFI Monde en direct</a>
-                <a href="#">RFI Afrique en direct</a>
-                <a href="#">Podcasts</a>
-                <a href="#">Vidéos</a>
-                <a href="#">Journaux Monde</a>
-                <a href="#">Journaux Afrique</a>
-                <a href="#">Journaux Amériques/Haïti</a>
-                <a href="#">Journal en français facile</a>
-                <a href="#">Grille des programmes Monde</a>
-                <a href="#">Grille des programmes Afrique</a>
-                <a href="#">Capter RFI</a>
+        <!-- Panneau du menu -->
+        <div class="menu-panel" id="menuPanel">
+            <div class="menu-content">
+                <div class="menu-item">
+                    <h2>Accueil</h2>
+                    <p><a href="#">RFI Monde en direct</a></p>
+                    <p><a href="#">Actualités</a></p>
+                    <p><a href="#">À propos</a></p>
+                </div>
+
+                <div class="menu-item">
+                    <h2>Podcast</h2>
+                    <p><a href="#">Élément 2</a></p>
+                    <p><a href="#">Derniers épisodes</a></p>
+                    <p><a href="#">Meilleurs moments</a></p>
+                </div>
+
+                <div class="menu-item">
+                    <h2>En direct</h2>
+                    <p><a href="#">Diffusion en continu</a></p>
+                    <p><a href="#">Événements en direct</a></p>
+                    <p><a href="#">Économie</a></p>
+                    <p><a href="#">Sciences</a></p>
+                    <p><a href="#">Sports</a></p>
+                    <p><a href="#">Afrique Foot</a></p>
+                    <p><a href="#">Stop l'infox</a></p>
+                    <p><a href="#">RFI Musique</a></p>
+                    <p><a href="#">Le Français facile avec RFI</a></p>
+                    <p><a href="#">RFI Connaissances</a></p>
+                    <p><a href="#">Tech</a></p>
+                    <p><a href="#">Contenus sponsorisés</a></p>
+                </div>
+
+                <div class="menu-item">
+                    <h2>Thematiques</h2>
+                    <p><a href="#">Culture et Médias</a></p>
+                    <p><a href="#">Environnement</a></p>
+                    <p><a href="#">Économie</a></p>
+                    <p><a href="#">Sciences</a></p>
+                    <p><a href="#">Sports</a></p>
+                    <p><a href="#">Afrique Foot</a></p>
+                    <p><a href="#">Stop l'infox</a></p>
+                    <p><a href="#">RFI Musique</a></p>
+                    <p><a href="#">Le Français facile avec RFI</a></p>
+                    <p><a href="#">RFI Connaissances</a></p>
+                    <p><a href="#">Tech</a></p>
+                    <p><a href="#">Contenus sponsorisés</a></p>
+                </div>
+
+                <div class="menu-item">
+                    <h2>Region</h2>
+                    <p><a href="#">Afrique</a></p>
+                    <p><a href="#">Amériques</a></p>
+                    <p><a href="#">Asie-Pacifique</a></p>
+                    <p><a href="#">Europe</a></p>
+                    <p><a href="#">Moyen-Orient</a></p>
+                    <p><a href="#">France</a></p>
+                    <p><a href="#">International</a></p>
+                    <p><a href="#">Afrique</a></p>
+                    <p><a href="#">Amériques</a></p>
+                    <p><a href="#">Asie-Pacifique</a></p>
+                    <p><a href="#">Europe</a></p>
+                </div>
+
+                <div class="menu-item">
+                    <h2>Ecouter</h2>
+                    <p><a href="#">RFI Monde en direct</a></p>
+                    <p><a href="#">RFI Afrique en direct</a></p>
+                    <p><a href="#">Podcasts</a></p>
+                    <p><a href="#">Vidéos</a></p>
+                    <p><a href="#">Journaux Monde</a></p>
+                    <p><a href="#">Journaux Afrique</a></p>
+                    <p><a href="#">Journaux Amériques/Haïti</a></p>
+                    <p><a href="#">Journal en français facile</a></p>
+                    <p><a href="#">Grille des programmes Monde</a></p>
+                    <p><a href="#">Grille des programmes Afrique</a></p>
+                    <p><a href="#">Capter RFI</a></p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Barre de navigation en bas -->
-    <nav class="navbar navbar-expand navbar-bottom">
-        <ul class="navbar-nav w-100">
-            <li class="nav-item">
-                <a class="nav-link active" href="#home" data-target="home">
-                    <i class="fas fa-home"></i><br>
-                    La une
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#podcasts" data-target="podcasts">
-                    <i class="fas fa-podcast"></i><br>
-                    Podcasts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#directs" data-target="directs">
-                    <i class="fas fa-play-circle"></i><br>
-                    Directs
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#thematiques" data-target="thematiques">
-                    <i class="fas fa-th-large"></i><br>
-                    Thématiques
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#menu" data-target="menu">
-                    <i class="fas fa-bars"></i><br>
-                    Menu
-                </a>
-            </li>
-            <div id="messageContainer"></div>
-        </ul>
-    </nav>
+        <!-- Barre de navigation en bas -->
+        <nav class="navbar navbar-expand navbar-bottom">
+            <ul class="navbar-nav w-100">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home" data-target="home">
+                        <i class="fas fa-home"></i><br>
+                        La une
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#podcasts" data-target="podcasts">
+                        <i class="fas fa-podcast"></i><br>
+                        Podcasts
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#directs" data-target="directs">
+                        <i class="fas fa-play-circle"></i><br>
+                        Directs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#thematiques" data-target="thematiques">
+                        <i class="fas fa-th-large"></i><br>
+                        Thématiques
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu" data-target="menu">
+                        <i class="fas fa-bars"></i><br>
+                        Menu
+                    </a>
+                </li>
+                <div id="messageContainer"></div>
+            </ul>
+        </nav>
 
-    <script src="script/script.js"></script>
-    <script src="script/recherche.js"></script>
-    <!-- jQuery and Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        var player = videojs('radioPlayer');
-        player.play();
-    </script>
+        <script src="script/script.js"></script>
+        <script src="script/recherche.js"></script>
+
+        <!-- jQuery and Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            var player = videojs('radioPlayer');
+            player.play();
+        </script>
 </body>
 
 </html>
